@@ -8,4 +8,3 @@ if __name__ == "__main__":
     AzureImageRecognition.GetImageJSON(imgName)
     servoMotor.servoMotor()
     soundWave.soundWave()
-
