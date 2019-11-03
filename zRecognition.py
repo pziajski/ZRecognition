@@ -1,15 +1,8 @@
-import requests
 import playsound
-import json
-import camera
 import pigpio
 import pprint
-import os
-import sys
-import time
-import cv2
-import datetime
 
+<<<<<<< HEAD
 # # Set image_path to the local path of an image that you want to ana
 def CaptureImage():
     camera_port = 0
@@ -71,7 +64,11 @@ def GetImageJSON():
     # relevant caption for the image is obtained from the 'description' property.
     analysis = response.json()
     print(analysis)
+=======
+import CameraCapture
+import AzureImageRecognition
+>>>>>>> 960de418e4e6ebfe62a0754d7756db5ca6530200
 
 if __name__ == "__main__":
-    imgName = CaptureImage()
-    # GetImageJSON()
+    imgName = CameraCapture.CaptureImage()
+    AzureImageRecognition.GetImageJSON(imgName)
