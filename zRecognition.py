@@ -1,96 +1,10 @@
-import requests
 import playsound
-import json
-import camera
 import pigpio
 import pprint
-import os
-import sys
-import time
-import cv2
-import datetime
 
-def CaptureImage():
-    camera_port = 0
-    imgName = datetime.datetime.now().strftime(format='%b-%d-%Y-%I-%M-%S-%p.png')
-    camera = cv2.VideoCapture(camera_port)
-    time.sleep(0.1)
-    return_value, image = camera.read()
-    cv2.imwrite(imgName, image)
-    return imgName
-
-
-# analyze_url = endpoint + "vision/v2.0/analyze"
-
-# # Set image_path to the local path of an image that you want to analyze.
-# image_path = "training\\18sfunfb8oj0n.jpg"
-
-# # Read the image into a byte array
-# image_data = open(image_path, "rb").read()
-# headers = {'Ocp-Apim-Subscription-Key': subscription_key,
-#            'Content-Type': 'application/octet-stream'}
-# params = {'visualFeatures': 'Categories,Description,Color'}
-# response = requests.post(
-#     analyze_url, headers=headers, params=params, data=image_data)
-# response.raise_for_status()
-
-# # The 'analysis' object contains various fields that describe the image. The most
-# # relevant caption for the image is obtained from the 'description' property.
-# analysis = response.json()
-# print(analysis)
-
-
-def GetImageJSON():
-    # Add your Computer Vision subscription key and endpoint to your environment variables.
-    if 'COMPUTER_VISION_SUBSCRIPTION_KEY' in os.environ:
-        subscription_key = os.environ['COMPUTER_VISION_SUBSCRIPTION_KEY']
-    else:
-        print("\nSet the COMPUTER_VISION_SUBSCRIPTION_KEY environment variable.\n**Restart your shell or IDE for changes to take effect.**")
-        sys.exit()
-
-    if 'COMPUTER_VISION_ENDPOINT' in os.environ:
-        endpoint = os.environ['COMPUTER_VISION_ENDPOINT']
-    else:
-        print("\nSet the COMPUTER_VISION_ENDPOINT environment variable.\n**Restart your shell or IDE for changes to take effect.**")
-        sys.exit()
-
-    text_recognition_url = endpoint + "vision/v2.1/read/core/asyncBatchAnalyze"
-
-    # Set image_url to the URL of an image that you want to analyze.
-    image_url = "https://upload.wikimedia.org/wikipedia/commons/d/dd/Cursive_Writing_on_Notebook_paper.jpg"
-
-    headers = {'Ocp-Apim-Subscription-Key': subscription_key}
-    data = {'url': image_url}
-    response = requests.post(
-        text_recognition_url, headers=headers, json=data)
-    response.raise_for_status()
-
-    # Extracting text requires two API calls: One call to submit the
-    # image for processing, the other to retrieve the text found in the image.
-
-    # Holds the URI used to retrieve the recognized text.
-    operation_url = response.headers["Operation-Location"]
-
-    # The recognized text isn't immediately available, so poll to wait for completion.
-    analysis = {}
-    poll = True
-    while (poll):
-        response_final = requests.get(
-            response.headers["Operation-Location"], headers=headers)
-        analysis = response_final.json()
-        print(analysis)
-        time.sleep(1)
-        if ("recognitionResults" in analysis):
-            poll = False
-        if ("status" in analysis and analysis['status'] == 'Failed'):
-            poll = Falseers, params=params, data=image_data)
-        response.raise_for_status()
-
-        # The 'analysis' object contains various fields that describe the image. The most
-        # relevant caption for the image is obtained from the 'description' property.
-        analysis = response.json()
-        print(analysis)
+import CameraCapture
+import AzureImageRecognition
 
 if __name__ == "__main__":
-    imgName = CaptureImage()
-    GetImageJSON()
+    imgName = CameraCapture.CaptureImage()
+    AzureImageRecognition.GetImageJSON()
