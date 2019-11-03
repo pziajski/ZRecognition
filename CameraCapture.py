@@ -11,5 +11,3 @@ def CaptureImage():
     return_value, image = camera.read()
     cv2.imwrite(imgName, image)
     return imgName
-if __name__ == "__main__":
-    CaptureImage()

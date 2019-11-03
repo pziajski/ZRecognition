@@ -18,7 +18,7 @@ def GetImageJSON(imageName):
         print("\nSet the COMPUTER_VISION_ENDPOINT environment variable.\n**Restart your shell or IDE for changes to take effect.**")
         sys.exit()
 
-    text_recognition_url = endpoint + "vision/v2.1/read/core/asyncBatchAnalyze"
+    text_recognition_url = endpoint + "training\download (1).jpg"
 
     # Set image_url to the URL of an image that you want to analyze.
     image_url = "imageName"
