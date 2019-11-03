@@ -2,8 +2,9 @@ import os
 import sys
 import requests
 import json
+import time
 
-def GetImageJSON():
+def GetImageJSON(imageName):
     # Add your Computer Vision subscription key and endpoint to your environment variables.
     if 'COMPUTER_VISION_SUBSCRIPTION_KEY' in os.environ:
         subscription_key = os.environ['COMPUTER_VISION_SUBSCRIPTION_KEY']
@@ -20,12 +21,11 @@ def GetImageJSON():
     text_recognition_url = endpoint + "vision/v2.1/read/core/asyncBatchAnalyze"
 
     # Set image_url to the URL of an image that you want to analyze.
-    image_url = "https://upload.wikimedia.org/wikipedia/commons/d/dd/Cursive_Writing_on_Notebook_paper.jpg"
+    image_url = "imageName"
 
     headers = {'Ocp-Apim-Subscription-Key': subscription_key}
     data = {'url': image_url}
-    response = requests.post(
-        text_recognition_url, headers=headers, json=data)
+    response = requests.post(text_recognition_url, headers=headers, json=data)
     response.raise_for_status()
 
     # Extracting text requires two API calls: One call to submit the
@@ -46,8 +46,7 @@ def GetImageJSON():
         if ("recognitionResults" in analysis):
             poll = False
         if ("status" in analysis and analysis['status'] == 'Failed'):
-            poll = Falseers, params=params, data=image_data
-        response.raise_for_status()
+            poll = False
 
         # The 'analysis' object contains various fields that describe the image. The most
         # relevant caption for the image is obtained from the 'description' property.
