@@ -10,6 +10,7 @@ import time
 import cv2
 import datetime
 
+# # Set image_path to the local path of an image that you want to ana
 def CaptureImage():
     camera_port = 0
     imgName = datetime.datetime.now().strftime(format='%b-%d-%Y-%I-%M-%S-%p.png')
@@ -21,8 +22,6 @@ def CaptureImage():
 
 
 # analyze_url = endpoint + "vision/v2.0/analyze"
-
-# # Set image_path to the local path of an image that you want to analyze.
 # image_path = "training\\18sfunfb8oj0n.jpg"
 
 # # Read the image into a byte array
