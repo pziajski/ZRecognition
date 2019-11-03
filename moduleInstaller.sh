@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt install python3.7
-sudo apt insatll python3-pip
+sudo apt install python3-pip
 pip install requests
 pip install playsound
 pip install camera
