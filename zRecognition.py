@@ -1,7 +1,3 @@
-import playsound
-import pigpio
-import pprint
-
 import CameraCapture
 import AzureImageRecognition
 
