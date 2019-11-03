@@ -1,6 +1,7 @@
 # Local Settings Folders #
 ##########################
 .vscode
+__pycache__
 
 # Compiled source #
 ###################
