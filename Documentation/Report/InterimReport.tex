@@ -85,9 +85,6 @@ Microsoft Azure
 \section{Operating Instructions}
 
 Please follow the listed steps to ensure that the system is operating as intended:
-\\
-\\
-
 
 \begin{itemize}
     \item Ensure that the Raspberry Pi Microprocessor is powered on
@@ -121,6 +118,23 @@ Please follow the listed steps to ensure that the system is operating as intende
 
 \subsection{Component images and components description/Captures of the major GUI used}
 
+The system utilized in this project consists of a few major components. Each component is listed and described below:
+
+\begin{itemize}
+\item Microprocessor - Raspberry Pi 3 Model B
+\begin{itemize}
+    \item The Raspberry Pi 3 Model B will act as the sole microprocessor for this project. It is programmed with a python script that is executed to run the program. The Pi makes use of  a 1.2GHz Quad Core 64bit CPU with 1GB built in RAM.
+\end{itemize} 
+\item Camera - Logitech C270 HD Webcam
+\begin{itemize}
+    \item The Logitech C270 Webcam is installed to ensure that the images captured are of high quality so that they are easy to interprit. These Images are taken in 720p with a fixed focus and field of view of \ang{60} These images are interpreted by the Microsoft Azure Cognitive services and returned back as a JSON object.
+\end{itemize}
+\item Servo Motor
+\begin{itemize}
+    \item The RioRand SG90 Micro 9d Servo motor will be the sole motor that will be utilized. 
+\end{itemize}
+\end{itemize}
+
 \subsection{Theory of operation of the entire system}
 
 % APPENDIX
@@ -141,8 +155,8 @@ If you are unsure of how to complete any of these tasks, please get in touch wit
 
 \appendix
 \section{Electrical Schematics}
-\section{Parts List}
 
+\section{Parts List}
 
 \begin{longtable}[c]{| l | c | c |}
     \hline
