@@ -1,8 +1,6 @@
 \documentclass[a4paper,12pt]{article}
-\setlength {\marginparwidth }{2cm}
 
 % packages used
-\usepackage{todonotes}
 \usepackage{graphicx}
 \usepackage{siunitx}
 \usepackage{longtable}
@@ -30,7 +28,6 @@
 \listoffigures
 \listoftables
 
-
 % MAIN SECTION
 \newpage
 \pagenumbering{arabic}
@@ -39,8 +36,7 @@ Z-Recognition is a License Plate Recognition system which provides clients with 
 The hardware aspect of the project involves the implementation of a microcontroller which will hold all the pre-required software to run the system. A camera that will be used to capture images of License plates. A speaker and a Servo Motor. 
 The software aspect of the project entails the creation of a python script which will bring together all the hardware elements and have them operate with each other. The script will use the capture an image which will be processed as a JavaScript Object Notation (JSON) using Microsoft Azure Cognitive Services to process the image as text. The captured data will then be cross referenced against a database for validity and the Servo Motor will operate in response to valid data being found, whereas, the speaker will operate if no matching data is found.
 
-
-% INTRODUCTION
+\newpage
 \section{Introduction}
 Security is an important feature for a company providing a service to their customer. The company must ensure that its service can only be used by authorized personnel. This is where Z-Recognition comes into play. Z-Recognition is a license plate recognition system that ensures only authorized personnel have access to a designated area. Z-Recognition accomplishes this by taking an image of the approaching vehicle and processing it. If the vehicle is authorized, meaning the license plate is recognized, the vehicle is given access. Our group has decided on a license plate recognition system due to its uses in modern day society. Today, one can still find areas that are monitored by a single employee, or by a ticket-based entry system. These systems could be found inferior because of their reliance on periodic human interaction or supervision. Z-Recognition is designed to run autonomously with minimal costs, and a single requirement of an active internet. This license plate recognition system also implements a core feature in the future of computer technology, machine learning. With machine learning, an artificial intelligence (AI) can provide systems the ability to learn and improve without being explicitly programmed. This means that automated systems become more secure and reliable, without the need of constant supervision. Finally, this project will require both hardware and software implementation to be fully functional. It will require us to work with and learn both software development and hardware assembly which we, as Computer Engineering and Technology students, would prefer.
 
@@ -81,42 +77,44 @@ Microsoft Azure
 \end{itemize}
 
 \newpage
-%OPERATING INSTRUCTIONS
 \section{Operating Instructions}
-
 Please follow the listed steps to ensure that the system is operating as intended:
 
 \begin{itemize}
     \item Ensure that the Raspberry Pi Microprocessor is powered on
     \begin{itemize}
         \item Plug the power cord into the Pi and connect to a power source
-        \item Launch the python script
     \end{itemize}
     \item Connect the Pi to an internet source
     \begin{itemize}
-        \item Connect using Wi-Fi or using an Ethernet Cable
+        \item Using an Ethernet Cable or connecting to a Wireless-Fidelity(Wi-Fi) access point
     \end{itemize}
-    \item Ensure that the Camera is on
-    \begin{itemize}
-        \item Connect the Camera to a powersource and aim in the direction towards which you want to capture the images
-    \end{itemize}
+    \item Ensure that the Camera is connected properly to the Raspberry Pi via Universal Serial Bus (USB)
+    \item Start the Main Python Script named "ZRecognition.py"
 \end{itemize}
 
-
+\newpage
 \section{Product Design, Implementation, and Operation of the System}
-
 \subsection{System Block-Diagram}
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[width = \linewidth]{../images/BlockDiagram.png}
-    
     \caption{System Block-Diagram}
 \end{figure}
 
+\newpage
 \subsection{UML Diagram}
-\subsection{Software Flow-Chart}
 
-\subsection{Component images and components description/Captures of the major GUI used}
+\newpage
+\subsection{Software Flow-Chart}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \linewidth]{../images/FlowChart.png}
+    \caption{Software Flow-Chart}
+\end{figure}
+
+\newpage
+\subsection{Components Description}
 
 The system utilized in this project consists of a few major components. Each component is listed and described below:
 
@@ -137,32 +135,29 @@ The system utilized in this project consists of a few major components. Each com
 
 \subsection{Theory of operation of the entire system}
 
-% APPENDIX
 \newpage
 \section{Maintenance Requirements}
-
 Routine maintenance is a good way to avoid any unwanted interruptions for the services being provided. It is recommended that proactive maintenance be done on the system at a frequency of one week (7 days) or anytime that the system fails to operate.
-\\
-\\
-    • Reset the Pi Microprocessor
-\\
-    •	Relaunch the Python script
-\\
-\\
-Please ensure that you test the service after completing maintenance to ensure that all systems are up and running. 
-
+\begin{itemize}
+    \item Reset the Raspberry pin (disconnect and reconnect power)
+    \item Relaunch the Python script
+\end{itemize}
+Please ensure that you test the service after completing maintenance to ensure that all systems are up and running. \\
 If you are unsure of how to complete any of these tasks, please get in touch with the contacts available in the contact(s) section of the report.
 
+% APPENDIX
 \appendix
+\newpage
 \section{Electrical Schematics}
 
 \section{Parts List}
 
+\newpage
+\section{Parts List / Bill Of Materials}
 \begin{longtable}[c]{| l | c | c |}
     \hline
     \multicolumn{3}{| c |}{\textbf{BILL OF MATERIALS}}\\
     \hline
-
     \textbf{Component Name} & \textbf{Quantity}  & \textbf{Price (CAD)} \\
     \hline
     Raspberry Pi 3 Model B & 1 & \$35.00 \\
@@ -175,14 +170,15 @@ If you are unsure of how to complete any of these tasks, please get in touch wit
     \hline
     \multicolumn{2}{|l|}{\textbf{Total Cost w/ Tax}} & \$113.98\\
     \hline
-
-    \caption{Bill of Materials}\\
-
+    \caption{Bill of Materials}
 \end{longtable}
 *NOTE* All prices are in Canadian Dollars (CAD)
 
-\section{List of all User Names and passwords used in software}
+\newpage
+\section{UserNames and Passwords}
 Currently there are no log in credentials required for any aspect of the software system
+
+\newpage
 \section{References}
 
 \newpage
