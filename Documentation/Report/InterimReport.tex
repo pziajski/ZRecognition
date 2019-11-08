@@ -127,12 +127,16 @@ The system utilized in this project consists of a few major components. Each com
 \end{itemize}
 \item Servo Motor
 \begin{itemize}
-    \item The RioRand SG90 Micro 9d Servo motor will be the sole motor that will be utilized. 
+    \item The RioRand SG90 Micro 9d Servo motor will be the sole motor that will be implemented into the system. It will simulate a gate opening and gate closing once the image data has been authenticated against a database of existing and valid license plates. The Motor operates utilizing a voltage range of 3.0V to 7.2V
 \end{itemize}
 \end{itemize}
 
 \subsection{Theory of operation of the entire system}
-
+The system can be broken down into two different parts, one being hardware, the other software. \\
+The hardware component of the project consists of a Raspberry Pi 3 Microprocessor, a Camera, a Speaker and a Servo Motor. The Pi will contain on it a python script, which, when executed will trigger the camera to take periodic image captures. \\
+When the camera captures a License Plate Image, it will dispatch the image to Microsoft Azure Cognitive Services. The Image will then be deciphered and converted into a text block and returned back as a JSON Object. The JSON object will then be cross referenced with a database of existing and authorized License Plates.\\
+If the data exists in the database and there is a match, the Servo Motor is activated and will rotate \ang{90} to simulate a gate arm opening.\\
+If the data does not exist in the database and there is no match, the Servo Motor remains at \ang{0} and a sound is played through the speaker to alert the vehicle personnel that the license plate could not be validated. 
 \newpage
 \section{Maintenance Requirements}
 Routine maintenance is a good way to avoid any unwanted interruptions for the services being provided. It is recommended that proactive maintenance be done on the system at a frequency of one week (7 days) or anytime that the system fails to operate.
@@ -151,6 +155,7 @@ If you are unsure of how to complete any of these tasks, please get in touch wit
 \section{Parts List}
 
 \newpage
+
 \section{Parts List / Bill Of Materials}
 \begin{longtable}[c]{| l | c | c |}
     \hline

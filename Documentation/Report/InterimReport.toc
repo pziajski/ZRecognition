@@ -8,7 +8,8 @@
 \contentsline {subsection}{\numberline {6.2}Software Flow-Chart}{6}% 
 \contentsline {subsection}{\numberline {6.3}Components Description}{7}% 
 \contentsline {subsection}{\numberline {6.4}Theory of operation of the entire system}{7}% 
-\contentsline {section}{\numberline {7}Maintenance Requirements}{8}% 
-\contentsline {section}{\numberline {A}Parts List}{8}% 
-\contentsline {section}{\numberline {B}Parts List / Bill Of Materials}{9}% 
-\contentsline {section}{\numberline {C}Contact Information}{10}% 
+\contentsline {section}{\numberline {7}Maintenance Requirements}{9}% 
+\contentsline {section}{\numberline {A}Parts List}{9}% 
+\contentsline {section}{\numberline {B}Electrical Schematics}{10}% 
+\contentsline {section}{\numberline {C}Parts List / Bill Of Materials}{11}% 
+\contentsline {section}{\numberline {D}Contact Information}{12}% 
