@@ -4,9 +4,10 @@
 % packages used
 \usepackage{todonotes}
 \usepackage{graphicx}
+\usepackage{siunitx}
 
 % titlepage information
-\title{ZRecognition \\ TPJ665 \\ Final Capstone Project}
+\title{ZRecognition\\TPJ665\\Final Capstone Project}
 \author{Patrick Ziajski \\ Zarak Khattak}
 \date{\today}
 
@@ -14,6 +15,10 @@
 
 % titlepage
 \maketitle
+\vfill
+\begin{center}
+    \textbf{SENECA COLLEGE OF APPLIED ARTS AND TECHNOLOGY}\\School of Electronics and Mechanical Engineering Technology\\1750 Finch Ave East, Toronto, Ontario, M2J 2X5. Tel. 416-491-5050\\www.senecacollege.ca
+\end{center}
 \thispagestyle{empty}
 \pagenumbering{roman}
 
@@ -32,7 +37,6 @@ Security is an important feature for a company providing a service to their cust
 
 \newpage
 \section{Functional Features}
-The following are inlcuded features with full functionality:
 \begin{itemize}
     \item Image processing - Using Microsoft's Cloud based Computer Vision Service, called Azure, a captured image will be uploaded to Azure's Service. The service perform Optical Character Recognition (OCR) on the image, and it will return a JavaScript Object Notation (JSON) object with all the recognized characters.
     \item Motor Control - The Raspberry Pi 3 Model B, a MicroController Unit (MCU), will control a servo-motor to imitate a gate arm used to allow entrance into a secure area.
@@ -41,14 +45,40 @@ The following are inlcuded features with full functionality:
 \end{itemize}
 
 \newpage
-\section{Specifications}
+\section{System Specifications}
+Camera
+\begin{itemize}
+    \item 720p/30fps
+    \item Fixed focus
+    \item Field of View - \ang{60}
+\end{itemize}
+Raspberry Pi 3 Model B
+\begin{itemize}
+    \item Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
+    \item 1GB RAM
+    \item BCM43438 wireless LAN
+    \item 40-pin extended GPIO
+    \item 4 Pole stereo output
+    \item Micro SD
+\end{itemize}
+Servo-motor
+\begin{itemize}
+    \item Operating voltage - 3.0V ~ 7.2V
+\end{itemize}
+Microsoft Azure
+\begin{itemize}
+    \item Active subscription
+    \item Cognitive Services resource
+\end{itemize}
+
+\newpage
 \section{Product Design, Implementation, and Operation of the System}
 \subsection{System block-diagram}
 \includegraphics[width = \linewidth]{../images/BlockDiagram.png}
 \subsection{UML diagram}
 \subsection{Software flow-chart}
 \includegraphics[width = \linewidth]{../images/FlowChart.png}
-\subsection{Component images and components description/Captures of the major GUI used}
+% \subsection{Component images and components description/Captures of the major GUI used}
 \subsection{Theory of operation of the entire system}
 
 % appendix
@@ -70,7 +100,6 @@ The following are inlcuded features with full functionality:
     Email: zkhattak@myseneca.ca
 \end{center}
 
-\newpage
-\section{Description of the attached CD content}
+% \section{Description of the attached CD content}
 
 \end{document}
