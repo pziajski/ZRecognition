@@ -1,16 +1,18 @@
 \contentsline {section}{\numberline {1}Executive Summary}{1}% 
 \contentsline {section}{\numberline {2}Introduction}{1}% 
-\contentsline {section}{\numberline {3}Functional Features of the Product}{2}% 
-\contentsline {section}{\numberline {4}Specifications of the Product}{3}% 
-\contentsline {section}{\numberline {5}Product Design, Implementation, and Operation of the System}{3}% 
-\contentsline {subsection}{\numberline {5.1}System block-diagram}{3}% 
-\contentsline {subsection}{\numberline {5.2}UML diagram}{3}% 
-\contentsline {subsection}{\numberline {5.3}Software flow-chart}{3}% 
-\contentsline {subsection}{\numberline {5.4}Component images and components description/Captures of the major GUI used}{3}% 
-\contentsline {subsection}{\numberline {5.5}Theory of operation of the entire system}{3}% 
-\contentsline {section}{\numberline {A}Electrical Schematics}{4}% 
-\contentsline {section}{\numberline {B}Parts List}{4}% 
-\contentsline {section}{\numberline {C}List of all User Names and passwords used in softare}{4}% 
-\contentsline {section}{\numberline {D}References}{4}% 
-\contentsline {section}{\numberline {E}Contact Information}{5}% 
-\contentsline {section}{\numberline {F}Description of the attached CD content}{6}% 
+\contentsline {section}{\numberline {3}Functional Features of the Product}{3}% 
+\contentsline {section}{\numberline {4}Specifications of the Product}{4}% 
+\contentsline {section}{\numberline {5}Operating Instructions}{5}% 
+\contentsline {section}{\numberline {6}Product Design, Implementation, and Operation of the System}{5}% 
+\contentsline {subsection}{\numberline {6.1}System Block-Diagram}{5}% 
+\contentsline {subsection}{\numberline {6.2}UML Diagram}{5}% 
+\contentsline {subsection}{\numberline {6.3}Software Flow-Chart}{5}% 
+\contentsline {subsection}{\numberline {6.4}Component images and components description/Captures of the major GUI used}{5}% 
+\contentsline {subsection}{\numberline {6.5}Theory of operation of the entire system}{5}% 
+\contentsline {section}{\numberline {7}Maintenance Requirements}{6}% 
+\contentsline {section}{\numberline {A}Electrical Schematics}{6}% 
+\contentsline {section}{\numberline {B}Parts List}{6}% 
+\contentsline {section}{\numberline {C}List of all User Names and passwords used in software}{7}% 
+\contentsline {section}{\numberline {D}References}{7}% 
+\contentsline {section}{\numberline {E}Contact Information}{8}% 
+\contentsline {section}{\numberline {F}Description of the attached CD content}{9}% 
