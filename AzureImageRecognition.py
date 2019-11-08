@@ -32,9 +32,9 @@ def GetImageJSON(imageName):
 
     analysis = response.json()
     try:
+        # pprint(analysis)
         for i in analysis['regions'][0]['lines']:
-            temp = i['words'][0]['text']
-            if len(temp) >= 3:
-                print(temp)
+            for j in i['words']:
+                print(j['text'])
     except:
         pprint(analysis)

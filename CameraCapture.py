@@ -4,7 +4,7 @@ import cv2
 import datetime
 
 def CaptureImage():
-    camera_port = 0
+    camera_port = 1
     imgName = datetime.datetime.now().strftime(format='%b-%d-%Y-%I-%M-%S-%p.png')
     camera = cv2.VideoCapture(camera_port)
     time.sleep(0.1)
