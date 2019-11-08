@@ -6,7 +6,7 @@
 \usepackage{longtable}
 
 % titlepage information
-\title{ZRecognition\\TPJ665\\Final Capstone Project}
+\title{ZRecognition\\TPJ665 Capstone\\Project Report}
 \author{Patrick Ziajski \\ Zarak Khattak}
 \date{\today}
 
@@ -21,6 +21,12 @@
 \thispagestyle{empty}
 \pagenumbering{roman}
 
+\newpage
+\section{Executive Summary}
+Z-Recognition is a License Plate Recognition system which provides clients with a new and intuitive way to implement and enforce parking systems. Our goal is to allow for the successful implementation of both hardware and software elements to allow for a working project.
+The hardware aspect of the project involves the implementation of a microcontroller which will hold all the pre-required software to run the system. A camera that will be used to capture images of License plates. A speaker and a Servo Motor. 
+The software aspect of the project entails the creation of a python script which will bring together all the hardware elements and have them operate with each other. The script will use the capture an image which will be processed as a JavaScript Object Notation (JSON) using Microsoft Azure Cognitive Services to process the image as text. The captured data will then be cross referenced against a database for validity and the Servo Motor will operate in response to valid data being found, whereas, the speaker will operate if no matching data is found.
+
 % table of contents
 \newpage
 \tableofcontents
@@ -31,12 +37,6 @@
 % MAIN SECTION
 \newpage
 \pagenumbering{arabic}
-\section{Executive Summary}
-Z-Recognition is a License Plate Recognition system which provides clients with a new and intuitive way to implement and enforce parking systems. Our goal is to allow for the successful implementation of both hardware and software elements to allow for a working project.
-The hardware aspect of the project involves the implementation of a microcontroller which will hold all the pre-required software to run the system. A camera that will be used to capture images of License plates. A speaker and a Servo Motor. 
-The software aspect of the project entails the creation of a python script which will bring together all the hardware elements and have them operate with each other. The script will use the capture an image which will be processed as a JavaScript Object Notation (JSON) using Microsoft Azure Cognitive Services to process the image as text. The captured data will then be cross referenced against a database for validity and the Servo Motor will operate in response to valid data being found, whereas, the speaker will operate if no matching data is found.
-
-\newpage
 \section{Introduction}
 Security is an important feature for a company providing a service to their customer. The company must ensure that its service can only be used by authorized personnel. This is where Z-Recognition comes into play. Z-Recognition is a license plate recognition system that ensures only authorized personnel have access to a designated area. Z-Recognition accomplishes this by taking an image of the approaching vehicle and processing it. If the vehicle is authorized, meaning the license plate is recognized, the vehicle is given access. Our group has decided on a license plate recognition system due to its uses in modern day society. Today, one can still find areas that are monitored by a single employee, or by a ticket-based entry system. These systems could be found inferior because of their reliance on periodic human interaction or supervision. Z-Recognition is designed to run autonomously with minimal costs, and a single requirement of an active internet. This license plate recognition system also implements a core feature in the future of computer technology, machine learning. With machine learning, an artificial intelligence (AI) can provide systems the ability to learn and improve without being explicitly programmed. This means that automated systems become more secure and reliable, without the need of constant supervision. Finally, this project will require both hardware and software implementation to be fully functional. It will require us to work with and learn both software development and hardware assembly which we, as Computer Engineering and Technology students, would prefer.
 
@@ -102,8 +102,8 @@ Please follow the listed steps to ensure that the system is operating as intende
     \caption{System Block-Diagram}
 \end{figure}
 
-\newpage
-\subsection{UML Diagram}
+% \newpage
+% \subsection{UML Diagram}
 
 \newpage
 \subsection{Software Flow-Chart}
@@ -115,9 +115,7 @@ Please follow the listed steps to ensure that the system is operating as intende
 
 \newpage
 \subsection{Components Description}
-
 The system utilized in this project consists of a few major components. Each component is listed and described below:
-
 \begin{itemize}
 \item Microprocessor - Raspberry Pi 3 Model B
 \begin{itemize}
@@ -147,8 +145,8 @@ If you are unsure of how to complete any of these tasks, please get in touch wit
 
 % APPENDIX
 \appendix
-\newpage
-\section{Electrical Schematics}
+% \newpage
+% \section{Electrical Schematics}
 
 \section{Parts List}
 
@@ -174,12 +172,12 @@ If you are unsure of how to complete any of these tasks, please get in touch wit
 \end{longtable}
 *NOTE* All prices are in Canadian Dollars (CAD)
 
-\newpage
-\section{UserNames and Passwords}
-Currently there are no log in credentials required for any aspect of the software system
+% \newpage
+% \section{UserNames and Passwords}
+% Currently there are no log in credentials required for any aspect of the software system
 
-\newpage
-\section{References}
+% \newpage
+% \section{References}
 
 \newpage
 \section{Contact Information}
