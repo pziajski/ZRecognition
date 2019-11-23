@@ -1,17 +1,15 @@
-\contentsline {section}{\numberline {1}Executive Summary}{1}% 
-\contentsline {section}{\numberline {2}Introduction}{2}% 
-\contentsline {section}{\numberline {3}Functional Features}{3}% 
-\contentsline {section}{\numberline {4}System Specifications}{4}% 
-\contentsline {section}{\numberline {5}Operating Instructions}{5}% 
-\contentsline {section}{\numberline {6}Product Design, Implementation, and Operation of the System}{6}% 
-\contentsline {subsection}{\numberline {6.1}System Block-Diagram}{6}% 
-\contentsline {subsection}{\numberline {6.2}UML Diagram}{7}% 
-\contentsline {subsection}{\numberline {6.3}Software Flow-Chart}{8}% 
-\contentsline {subsection}{\numberline {6.4}Components Description}{9}% 
-\contentsline {subsection}{\numberline {6.5}Theory of operation of the entire system}{9}% 
-\contentsline {section}{\numberline {7}Maintenance Requirements}{11}% 
-\contentsline {section}{\numberline {A}Electrical Schematics}{12}% 
-\contentsline {section}{\numberline {B}Parts List / Bill Of Materials}{13}% 
-\contentsline {section}{\numberline {C}UserNames and Passwords}{14}% 
-\contentsline {section}{\numberline {D}References}{15}% 
-\contentsline {section}{\numberline {E}Contact Information}{16}% 
+\contentsline {section}{\numberline {1}Executive Summary}{ii}% 
+\contentsline {section}{\numberline {2}Introduction}{1}% 
+\contentsline {section}{\numberline {3}Functional Features}{2}% 
+\contentsline {section}{\numberline {4}System Specifications}{3}% 
+\contentsline {section}{\numberline {5}Operating Instructions}{4}% 
+\contentsline {section}{\numberline {6}Product Design, Implementation, and Operation of the System}{5}% 
+\contentsline {subsection}{\numberline {6.1}System Block-Diagram}{5}% 
+\contentsline {subsection}{\numberline {6.2}Software Flow-Chart}{6}% 
+\contentsline {subsection}{\numberline {6.3}Components Description}{7}% 
+\contentsline {subsection}{\numberline {6.4}Theory of operation of the entire system}{7}% 
+\contentsline {section}{\numberline {7}Maintenance Requirements}{9}% 
+\contentsline {section}{\numberline {A}Parts List}{9}% 
+\contentsline {section}{\numberline {B}Electrical Schematics}{10}% 
+\contentsline {section}{\numberline {C}Parts List / Bill Of Materials}{11}% 
+\contentsline {section}{\numberline {D}Contact Information}{12}% 
