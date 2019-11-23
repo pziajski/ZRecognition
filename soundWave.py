@@ -1,5 +1,6 @@
 import numpy as np
 import simpleaudio as sa
+from playsound import playsound
 
 
 def soundWave():
