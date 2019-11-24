@@ -8,26 +8,27 @@ class MotorControl():
     leftDir = 10
 
     def __init__(self):
-        GPIO.cleanup()
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(12, GPIO.OUT)
         self.p = GPIO.PWM(12,50) #pin, frequency
-        self.Reset()
 
-    def TurnLeft(self):
-        self.p.start(self.leftDir)
-        time.sleep(3)
-        self.p.stop()
-    
-    def TurnRight(self):
-        self.p.start(self.rightDir)
-        time.sleep(3)
-        self.p.stop()
-
-    def Reset(self):
-        self.p.start(self.middDir)
-        time.sleep(3)
-        self.p.stop()
-
-    def ChangeSpeed(self, dutyCycle):
-        self.p.ChangeDutyCycle(dutyCycle)
+    def Turn(self):
+        self.p.start(2.5)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(5)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(7.5)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(10)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(12.5)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(10)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(7.5)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(5)
+        time.sleep(0.5)
+        self.p.ChangeDutyCycle(2.5)
+        time.sleep(0.5)
+        GPIO.cleanup()

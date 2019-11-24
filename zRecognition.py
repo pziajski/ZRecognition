@@ -28,5 +28,4 @@ if __name__ == "__main__":
         validation = db.CheckAuthorization(i)
         print('{} has been validated!!'.format(i) if validation else '{} is not valid!!'.format(i))
         if validation:
-            motor.TurnLeft()
-            motor.Reset()
+            motor.Turn()
