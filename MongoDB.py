@@ -17,8 +17,11 @@ class MongoDB:
             sys.exit()
 
     def SetupInstanceVariables(self):
-        self.database = self.client['ZRecognition']
-        self.collection = self.database['licenseplates']
+        try:
+            self.database = self.client['ZRecognition']
+            self.collection = self.database['licenseplates']
+        except:
+            print('Error connecting to database...')
 
     def InsertPlate(self, plate):
         result = self.collection.insert_one(plate)

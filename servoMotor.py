@@ -2,21 +2,18 @@ import pigpio
 import time
 import RPi.GPIO as GPIO #Raspberry Pi based library that acceses it's GPIOs
 
+class MotorControl():
+    def __init__(self):
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(12, GPIO.OUT)
+        self.p = GPIO.PWM(12,50) #pin, frequency
 
-def servoMotor():
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(12, GPIO.OUT)
-    p = GPIO.PWM(12,50)
-    p.start(7.5)
-    try:
-        while True:
-            p.ChangeDutyCycle(7.5)
-            time.sleep(1)
-            p.ChangeDutyCycle(2.5)
-            time.sleep(1)
-            p.ChangeDutyCycle(12.5)
-            time.sleep(1)
-    except KeyboardInterrupt:
-        p.stop()
+    def Start(self):
+        self.p.start(7.5)
+    
+    def Stop(self):
+        self.p.stop()
         GPIO.cleanup()
-    # https://rpi.science.uoit.ca/lab/servo/
+
+    def ChangeSpeed(self, dutyCycle):
+        self.p.ChangeDutyCycle(dutyCycle)

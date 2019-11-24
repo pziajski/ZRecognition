@@ -4,7 +4,6 @@ import requests
 import json
 import time
 from pprint import pprint
-
 import CameraCapture
 
 def GetImageJSON(imageName):
@@ -31,10 +30,4 @@ def GetImageJSON(imageName):
     response.raise_for_status()
 
     analysis = response.json()
-    try:
-        # pprint(analysis)
-        for i in analysis['regions'][0]['lines']:
-            for j in i['words']:
-                print(j['text'])
-    except:
-        pprint(analysis)
+    return analysis
