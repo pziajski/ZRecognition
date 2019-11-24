@@ -21,7 +21,7 @@ if __name__ == "__main__":
     db = MongoDB() #database
 
     # imgName = CaptureImage()
-    imgName = 'ImagesTaken\Nov-24-2019-03-40-23-PM.png'
+    imgName = 'ImagesTaken/Nov-24-2019-03-40-23-PM.png'
     result = StoreResults(GetImageJSON(imgName))
     print(result if result!= [] else 'Nothing Found!')
     for i in result:
