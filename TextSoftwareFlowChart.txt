@@ -1,0 +1,74 @@
+------------------------ SOFTWARE FLOWCHART
+start --> Main Form
+{
+	gui elements initialized
+	gui opened
+		WHILE not closed, keep open
+}
+
+start --> Manual Capture
+{
+	create new thread
+	lock main process from making new threads
+	launch 'Take Image' method
+	unlock main process from making new threads
+}
+
+start --> Timed Capture
+{
+	create new thread
+	lock main process from making new threads
+		store time from option menu
+		count down to 0, logging time
+		launch 'Take Image' method
+			WHILE stop timed capture not true
+	unlock main process from making new threads
+}
+
+start --> Take Image
+{
+	remove all displayed images from GUI
+	launch 'Capture Image' method and store results ColorImg and DigiImg
+	send DigiImg to Azure, and store result as DigiOCR
+	resize both images to fix inside the GUI
+	load the images into local members for referencing
+	display images onto the GUI
+		IF DigiOCR is empy
+			display not authorized
+			end
+	send DigiOCR to 'Validate Results'
+		IF valiated
+			turn motor
+		ELSE
+			play error sounds
+}
+
+start --> Capture Image
+{
+	define the port of the camera being used
+	create names for ColorImg and DigiImg with unique identifier
+	capture images
+	store ColorImg
+	grayscale DigiImg
+	binarize DigiImg
+	store DigiImg
+	return image names for reference
+}
+
+start --> Azure OCR
+{
+	check for valid key and endpoint in system environment
+	read DigiImg to a local variable
+	make API call including DigiImg, endpoint, and key
+	store result of API call into Response
+	read Response (JSON) into results and store all words found
+	plot OCR boundary response onto the DigiImg
+	save plot to image
+	return JSON of words found
+}
+
+start --> MongoDB
+{
+	check for username and password in system environemt
+	store database and collection call to object members
+}
