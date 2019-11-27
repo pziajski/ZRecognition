@@ -10,10 +10,11 @@ class MongoDB:
 
     def CreateConnection(self):
         if 'MONGO_DB_ADMIN_PASSWORD' in os.environ:
-            password = os.environ['MONGO_DB_ADMIN_PASSWORD']
-            self.client = pymongo.MongoClient('mongodb+srv://admin:{}@privatecluster-i2ans.mongodb.net/test?retryWrites=true&w=majority'.format(password))
+            username = os.environ['MONGO_DB_USERNAME']
+            password = os.environ['MONGO_DB_PASSWORD']
+            self.client = pymongo.MongoClient('mongodb+srv://{}:{}@privatecluster-i2ans.mongodb.net/test?retryWrites=true&w=majority'.format(username, password))
         else:
-            print("\nSet the MONGO_DB_ADMIN_PASSWORD environment variable.\n**Restart your shell or IDE for changes to take effect.**")
+            print("\nSet the MONGO_DB_USERNAME and MONGO_DB_PASSWORD environment variable.\n**Restart your shell or IDE for changes to take effect.**")
             sys.exit()
 
     def SetupInstanceVariables(self):
