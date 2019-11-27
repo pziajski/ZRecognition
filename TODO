@@ -1,0 +1,15 @@
+-------------------------------- CODE --------------------------------
+
+get pictures of the OCR with blocks to show what it looks for (for presentation)
+
+implement motor turn, change to function with gate arm
+
+implement sound play, change to play short burst beeps with error
+
+implement a sys.settrace() to check after everyline execute of timedCapature to kill thread
+
+-------------------------------- PRESENTATION --------------------------------
+
+modify block diagramn to show mongoDB
+
+talk about how we started out just doing regular images, then did research to find digitization and how that helped fix edge detection

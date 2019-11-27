@@ -13,8 +13,3 @@ def soundWave():
     audio = audio.astype(np.int16)
     play_obj = sa.play_buffer(audio, 1,2,fs)
     play_obj.wait_done()
-
-
-
-#https://realpython.com/playing-and-recording-sound-python/
-

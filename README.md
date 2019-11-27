@@ -22,3 +22,11 @@ Python modues:
 * camera
 * cv2
 * datetime
+* matplotlib
+* io
+* fuzzywuzzy
+* PIL
+* tkinter
+* threading
+* glob
+* os
