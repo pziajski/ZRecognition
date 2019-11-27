@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Python version 3.7.5
+Tested on Python version 3.7
 
 Python modues:
 
