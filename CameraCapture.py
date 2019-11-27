@@ -6,12 +6,14 @@ import os
 
 def CaptureImage():
     path = 'ImagesTaken'
+    if not os.path.exists(path):
+        os.makedirs(path)
     camera_port = 0
     imgNameDigitized = os.path.join(path ,datetime.datetime.now().strftime(format='%b-%d-%Y-%I-%M-%S-%p_DIGI.png'))
     imgNameColorized = os.path.join(path ,datetime.datetime.now().strftime(format='%b-%d-%Y-%I-%M-%S-%p_COLOR.png'))
     
     # CAPTURE IMAGE
-    camera = cv2.VideoCapture(camera_port, cv2.CAP_DSHOW)
+    camera = cv2.VideoCapture(camera_port) #, cv2.CAP_DSHOW removed because of ERROR
     time.sleep(0.1)
     return_value, img = camera.read()
     camera.release()

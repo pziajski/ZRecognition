@@ -9,7 +9,7 @@ class MongoDB:
         self.SetupInstanceVariables()
 
     def CreateConnection(self):
-        if 'MONGO_DB_ADMIN_PASSWORD' in os.environ:
+        if 'MONGO_DB_USERNAME' in os.environ and 'MONGO_DB_PASSWORD' in os.environ:
             username = os.environ['MONGO_DB_USERNAME']
             password = os.environ['MONGO_DB_PASSWORD']
             self.client = pymongo.MongoClient('mongodb+srv://{}:{}@privatecluster-i2ans.mongodb.net/test?retryWrites=true&w=majority'.format(username, password))
