@@ -52,4 +52,5 @@ def GetImageJSON(imageName):
             ax.axes.add_patch(patch)
     plt.axis('off')
     plt.savefig(imageName, bbox_inches="tight")
+    plt.close('all')
     return analysis
