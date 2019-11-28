@@ -3,8 +3,8 @@ from CustomFunctions import ClearImages, CombineResults
 from CameraCapture import CaptureImage
 from AzureImageRecognition import GetImageJSON
 from MongoDB import MongoDB
-# from ServoMotor import MotorControl
-# from SoundWave import ErrorNotification
+from ServoMotor import MotorControl
+from SoundWave import ErrorNotification
 
 # REQUIRED MODULES
 import threading, re, cv2, glob, os
@@ -135,13 +135,13 @@ class GUI:
                 self.canvasDigi.create_image(0, 0, image=self.currentImageDigi, anchor=NW)
             if result == '':
                 self.LogResult('Vehicle is NOT Authorized!')
-                # ErrorNotification()
+                ErrorNotification()
             elif self.ValidateResults(result):
                 self.LogResult('Vehicle is Authorized!!!')
-                # self.motor.Turn()
+                self.motor.Turn()
             else:
                 self.LogResult('Vehicle is NOT Authorized!')
-                # ErrorNotification()
+                ErrorNotification()
     
     def ValidateResults(self, recognizedPlate):
         for storedPlate in self.db.GetAllPlates():
